@@ -2,6 +2,10 @@
 /* global require, module */
 var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
+// Temporary fix to allow importing sinon in test
+// Waiting on https://github.com/ef4/ember-browserify/issues/14
+process.env.BROWSERIFY_TESTS = true;
+
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
     // Add options here
